@@ -1,6 +1,7 @@
 package com.example.demo.model.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "specialities")
@@ -9,6 +10,7 @@ public class Speciality {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String name;
 
     public Long getId() {

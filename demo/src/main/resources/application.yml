@@ -2,13 +2,13 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/my-project?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&serverTimezone=UTC
-    username: vas1lb
-    password: SimonaVasileva23!
+    username: root
+    password: admin
 server:
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.mariadb.jdbc.Driver
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     defer-datasource-initialization: true
   sql:
     init:

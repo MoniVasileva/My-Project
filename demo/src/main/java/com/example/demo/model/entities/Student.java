@@ -1,20 +1,18 @@
 package com.example.demo.model.entities;
 
 import jakarta.persistence.*;
-import java.util.HashMap;
-import java.util.Map;
+import lombok.*;
 
 @Entity
 @Table(name = "students")
 public class Student extends User {
+
     @ManyToOne
     private Speciality speciality;
     @ManyToOne
     private Subject subject;
+    @Column
     private Double grade;
-
-    // private Map<Subject,Double> subjectGradeMap;
-
 
     public Speciality getSpeciality() {
         return speciality;

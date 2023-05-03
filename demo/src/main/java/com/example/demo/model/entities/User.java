@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MappedSuperclass;
+import lombok.*;
 
 @MappedSuperclass
 public class User {
@@ -66,6 +67,15 @@ public class User {
 
     public User setPassword(String password) {
         this.password = password;
+        return this;
+    }
+
+    public UserRole getRole() {
+        return role;
+    }
+
+    public User setRole(UserRole role) {
+        this.role = role;
         return this;
     }
 }
